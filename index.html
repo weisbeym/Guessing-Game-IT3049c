@@ -14,18 +14,32 @@
         <button id="startButton">Start</button>
     </div>
     <div id="gameScreen" class="hidden">
-        <!-- TODO: Display for initial random number -->
-        <div id="randomNumDisplay">
-            <p>Here is your random number! <span id="randomNum"></span></p>
+        <!-- Display for initial random number -->
+        <div id="numberDisplay">
+            <span id="initialNumberHolder"></span>
         </div>
         <div id="guessScreen">
             <form id="guessForm">
-                <label for="userInput">
-                    Is it higher, lower, or the same? Try your luck!
-                    <input type="radio" id="higher">
+                <h4>Will the next number be higher, lower, or the same? Try your luck!</h4>
+                <label for="higher">
+                    Higher:
+                    <input type="radio" id="higher" name="userGuess" value="higher" checked>
                 </label>
+                <label for="lower">
+                    Lower:
+                    <input type="radio" id="lower" name="userGuess" value="lower">
+                </label>
+                <label for="same">
+                    The Same:
+                    <input type="radio" id="same" name="userGuess" value="same">
+                </label>
+                <input type="submit" value="Guess!">
             </form>
         </div>
+        <label for="resetButton">
+            Do you want to play again?
+            <button id="resetButton">Reset</button>
+        </label>
     </div>
 
 <!--
