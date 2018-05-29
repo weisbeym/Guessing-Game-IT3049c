@@ -8,7 +8,25 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<!-- TODO: Display for initial random number -->
+    <div id="startScreen">
+        <h1>Welcome to the Higher/Lower Guessing Game! Press Start to Begin.</h1>
+        <br>
+        <button id="startButton">Start</button>
+    </div>
+    <div id="gameScreen" class="hidden">
+        <!-- TODO: Display for initial random number -->
+        <div id="randomNumDisplay">
+            <p>Here is your random number! <span id="randomNum"></span></p>
+        </div>
+        <div id="guessScreen">
+            <form id="guessForm">
+                <label for="userInput">
+                    Is it higher, lower, or the same? Try your luck!
+                    <input type="radio" id="higher">
+                </label>
+            </form>
+        </div>
+    </div>
 
 <!--
   TODO: Create HTML form with input for player selection
