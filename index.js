@@ -5,9 +5,7 @@ const gameScreen = document.getElementById("gameScreen");
 const startButton = document.getElementById("startButton");
 
 const guessForm = document.getElementById("guessForm");
-const higher = document.getElementById("higher").value;
-const lower = document.getElementById("lower").value;
-const same = document.getElementById("same").value;
+const values = document.getElementsByName("userGuess");
 
 let game;
 
@@ -50,6 +48,9 @@ startButton.addEventListener("click", function (startButtonClickEvent) {
     gameScreen.classList.remove("hidden");
 
     game = new HigherLowerGuessingGame();
+    console.log(higher);
+    console.log(lower);
+    console.log(same);
 
 });
 
@@ -57,15 +58,16 @@ guessForm.addEventListener("submit", function (gameFormSubmitEvent) {
     gameFormSubmitEvent.preventDefault();
     let userInput;
 
-    if(guessForm.value = "higher") {
+    if(values[0].checked) {
         userInput = "higher";
-    } else if(guessForm.value = "lower") {
+    } else if(values[1].checked) {
         userInput = "lower";
-    } else if(guessForm.value = "same") {
+    } else if(values[2].checked) {
         userInput = "same";
     }
+    console.log(userInput);
 
-    if (userInput !== "higher" || userInput !== "lower" || userInput !== "same") {
+    if (userInput === null) {
         return alert("You can't guess without choosing a value! Try again after choosing one.");
     }
 
