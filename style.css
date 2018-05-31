@@ -1,3 +1,39 @@
 .hidden {
     display: none;
 }
+
+body {
+    text-align: center;
+    background-color: aquamarine;
+}
+
+h1 {
+    color: blueviolet;
+}
+
+#startButton {
+    color: blueviolet;
+}
+
+#gameScreen {
+    color: blueviolet;
+    padding-top: 20px;
+}
+
+#guessForm {
+    padding: 10px;
+    margin: 5px;
+}
+
+#initialNumberHolder {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+input {
+    color: blueviolet;
+}
+
+#resetButton {
+    color: blueviolet;
+}
